@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calculator</title>
+    <!-- daisyUI and Tailwind CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Boldonse&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- style -->
+    <style>
+        .font-poppins {
+            font-family: "Poppins", sans-serif;
+        }
+        
+    </style>
+</head>
+
+<body class="font-poppins">
+    <section class="md:w-4/12 h-screen mx-auto bg-slate-100 p-8">
+        <header>
+            <!-- heading -->
+            <h1 class="text-4xl text-gray-900 uppercase font-bold">Calculator</h1>
+
+            <div class="">
+                <!-- number display here -->
+                <div class="bg-white my-7 rounded-3xl">
+                    <input id="calculate-display" disabled class="w-full h-34 border-none outline-none p-6 text-3xl" type="text">
+                </div>
+                <!-- btns here -->
+                <div class="grid grid-cols-4 gap-5 ">
+                    <button  class="btn text-4xl p-8 rounded-3xl bg-yellow-100">AC</button>
+                    <button onclick="clearDisplay()" class="btn text-4xl p-8 rounded-3xl bg-yellow-100">C</button>
+                    <button class="btn text-4xl p-8 rounded-3xl bg-yellow-100">+/-</button>
+                    <button class="btn input-btn text-4xl p-8 rounded-3xl bg-yellow-100">/</button>
+                    <button onclick="appendNumber('7')" class="btn input-btn text-4xl p-8 rounded-3xl bg-teal-100">7</button>
+                    <button onclick="appendNumber('8')" class="btn input-btn text-4xl p-8 rounded-3xl bg-teal-100">8</button>
+                    <button onclick="appendNumber('9')" class="btn input-btn text-4xl p-8 rounded-3xl bg-teal-100">9</button>
+                    <button onclick="appendOperator('*')" class="btn input-btn text-4xl p-8 rounded-3xl bg-yellow-100">*</button>
+                    <button onclick="appendNumber('4')" class="btn input-btn text-4xl p-8 rounded-3xl bg-teal-100">4</button>
+                    <button onclick="appendNumber('5')" class="btn input-btn text-4xl p-8 rounded-3xl bg-teal-100">5</button>
+                    <button onclick="appendNumber('6')" class="btn input-btn text-4xl p-8 rounded-3xl bg-teal-100">6</button>
+                    <button onclick="appendOperator('-')" class="btn input-btn text-4xl p-8 rounded-3xl bg-yellow-100">-</button>
+                    <button onclick="appendNumber('1')" class="btn input-btn text-4xl p-8 rounded-3xl bg-teal-100">1</button>
+                    <button onclick="appendNumber('2')" class="btn input-btn text-4xl p-8 rounded-3xl bg-teal-100">2</button>
+                    <button onclick="appendNumber('3')" class="btn input-btn text-4xl p-8 rounded-3xl bg-teal-100">3</button>
+                    <button onclick="appendOperator('+')" class="btn input-btn text-4xl p-8 rounded-3xl bg-yellow-100">+</button>
+                    <button onclick="appendOperator('%')" class="btn input-btn text-4xl p-8 rounded-3xl bg-teal-100">%</button>
+                    <button onclick="appendNumber('0')" class="btn input-btn text-4xl p-8 rounded-3xl bg-teal-100">0</button>
+                    <button onclick="appendNumber('.')" class="btn input-btn text-4xl p-8 rounded-3xl bg-teal-100">.</button>
+                    <button onclick="calculateResult()" class="btn input-btn text-4xl p-8 rounded-3xl bg-yellow-100">=</button>
+                </div>
+            </div>
+        </header>
+    </section>
+    <!-- scripts -->
+     <script src="index.js"></script>
+</body>
+
+</html>
